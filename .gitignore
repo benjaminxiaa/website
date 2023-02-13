@@ -66,5 +66,4 @@ node_modules/
 .env
 
 # Automate Git Scripts
-gitScripts
-gitScripts/gpush.cmd
+gpush.cmd
