@@ -139,10 +139,10 @@ a:hover {
 }
 
 .go-home {
-    font-size: 18px;
+    font-size: 28px;
     position: absolute;
     top: 18px;
-    left: 1em;
+    left: 0.5em;
 }
 
 .img-gallery {
