@@ -163,3 +163,10 @@ a:hover {
     height: auto !important;
     margin-bottom: 10px;
 }
+
+.gallery-hr {
+    color: white;
+    background-color: white;
+    outline: 2px auto white;
+    border-style: solid;
+}
