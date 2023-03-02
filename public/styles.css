@@ -31,7 +31,7 @@ body {
     font-size: 15px;
     line-height: 1.6;
     color: #fff;
-    background-color: #1f2029;
+    background-color: #14141a;
     /* overflow: hidden; */
     /* height: 100vh; */
     -webkit-transition: all 300ms linear;
@@ -81,7 +81,7 @@ a:hover {
     font-size: 20px;
     line-height: 1;
     font-weight: 700;
-    color: #ffeba7;
+    color: #78b6ec;
 }
 
 .main p span {
@@ -98,7 +98,7 @@ a:hover {
     line-height: 1;
     opacity: 0.5;
     font-weight: 700;
-    color: #ffeba7;
+    color: #78b6ec;
     letter-spacing: 2px;
     top: 50%;
     left: 20px;
@@ -121,7 +121,7 @@ a:hover {
     line-height: 1;
     opacity: 0.5;
     font-weight: 700;
-    color: #ffeba7;
+    color: #78b6ec;
     letter-spacing: 2px;
     top: 50%;
     right: 20px;
