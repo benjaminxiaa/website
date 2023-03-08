@@ -5,7 +5,9 @@
     --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
 }
 
-html, body {margin: 0; height: 100%; overflow: hidden}
+html, body {
+    margin: 0;
+}
 
 * {
     scrollbar-width: auto;
