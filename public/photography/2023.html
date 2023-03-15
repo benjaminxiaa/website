@@ -42,6 +42,30 @@
             <h1 style="font-size: 33.6px;">CVR Robo Competition</h1>
         </div>
 
+        <script>
+            function preloadImages(array) {
+                if (!preloadImages.list) {
+                    preloadImages.list = [];
+                }
+                var list = preloadImages.list;
+                for (var i = 0; i < array.length; i++) {
+                    var img = new Image();
+                    img.onload = function () {
+                        var index = list.indexOf(this);
+                        if (index !== -1) {
+                            // remove image from the array once it's loaded
+                            // for memory consumption reasons
+                            list.splice(index, 1);
+                        }
+                    }
+                    list.push(img);
+                    img.src = array[i];
+                }
+            }
+
+            preloadImages(["../images/portfolio/BigSur/DSC04509.jpg", "../images/portfolio/BigSur/DSC04551.jpg", "../images/portfolio/BigSur/DSC04560.jpg", "../images/portfolio/BigSur/DSC04582.jpg", "../images/portfolio/BigSur/DSC04608.jpg", "../images/portfolio/BigSur/DSC04646.jpg", "../images/portfolio/BigSur/DSC04663.jpg", "../images/portfolio/BigSur/DSC04668.jpg", "../images/portfolio/BigSur/DSC04679.jpg", "../images/portfolio/BigSur/DSC04728.jpg", "../images/portfolio/BigSur/DSC04872.jpg", "../images/portfolio/BigSur/DSC04875.jpg", "../images/portfolio/BigSur/DSC04893.jpg", "../images/portfolio/BigSur/DSC04925.jpg", "../images/portfolio/BigSur/DSC04930.jpg", "../images/portfolio/BigSur/DSC04970.jpg", "../images/portfolio/BigSur/DSC05021.jpg"]);
+        </script>
+
         <!-- Firebase Initializing -->
         <script src="./firebaseinit.js"></script>
         <script defer src="/__/firebase/9.17.1/firebase-app-compat.js"></script>

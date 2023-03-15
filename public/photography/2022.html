@@ -40,6 +40,30 @@
             <img src="../images/portfolio/DeathValley/DSC04010 - Copy - Copy.JPG" id="dv">
         </div>
 
+
+        <script>
+            function preloadImages(array) {
+                if (!preloadImages.list) {
+                    preloadImages.list = [];
+                }
+                var list = preloadImages.list;
+                for (var i = 0; i < array.length; i++) {
+                    var img = new Image();
+                    img.onload = function () {
+                        var index = list.indexOf(this);
+                        if (index !== -1) {
+                            // remove image from the array once it's loaded
+                            // for memory consumption reasons
+                            list.splice(index, 1);
+                        }
+                    }
+                    list.push(img);
+                    img.src = array[i];
+                }
+            }
+
+            preloadImages(["../images/portfolio/DeathValley/b_4132739_deathvalley_mineraldeposits.jpg", "../images/portfolio/DeathValley/b_4132752_deathvalley_mooon.jpg", "../images/portfolio/DeathValley/b_4132763_goldenwaves.jpg", "../images/portfolio/DeathValley/b_4132804_sequoia_bigtree.jpg", "../images/portfolio/DeathValley/b_4132809_sequoia_pond.jpg", "../images/portfolio/DeathValley/b_4132815_sequoia_rock.jpg", "../images/portfolio/DeathValley/b_4132686_autumn_maple.jpg", "../images/portfolio/DeathValley/b_4132709_backyard_moon.jpg", "../images/portfolio/DeathValley/b_4132717_backyard_moon_greenthing.jpg", "../images/portfolio/DeathValley/b_4132770_hidingmoon.jpg", "../images/portfolio/DeathValley/b_4132779_lavendarbush.jpg", "../images/portfolio/DeathValley/b_4132786_locallygrowndandelions.jpg", "../images/portfolio/DeathValley/b_4132793_redsunset.jpg", "../images/portfolio/DeathValley/DSC04010 - Copy - Copy.JPG"]);
+        </script>
         <!-- Firebase Initializing -->
         <script src="./firebaseinit.js"></script>
         <script defer src="/__/firebase/9.17.1/firebase-app-compat.js"></script>
