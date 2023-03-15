@@ -52,6 +52,13 @@ a:hover {
     color: inherit;
 }
 
+.photo {
+}
+
+.photo:hover {
+    color: #78b6ec;
+}
+
 .main {
     position: relative;
     width: 100%;
