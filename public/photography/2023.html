@@ -12,56 +12,57 @@
 </head>
 
 <body>
-    <div>
+    <div class="main">
         <a href="../photography"><i rel="preload" class="fa-solid fa-circle-chevron-left go-home"></i></a>
         <div class="gallery">
             <h1 style="text-align: right; margin-right: 0.5rem;">Big Sur</h1>
-            <img src="../images/portfolio/BigSur/DSC04509.jpg" id="bs">
-            <img src="../images/portfolio/BigSur/DSC04551.jpg" id="bs">
-            <img src="../images/portfolio/BigSur/DSC04560.jpg" id="bs">
-            <img src="../images/portfolio/BigSur/DSC04582.jpg" id="bs">
-            <img src="../images/portfolio/BigSur/DSC04608.jpg" id="bs">
-            <img src="../images/portfolio/BigSur/DSC04646.jpg" id="bs">
-            <img src="../images/portfolio/BigSur/DSC04663.jpg" id="bs">
-            <img src="../images/portfolio/BigSur/DSC04668.jpg" id="bs">
-            <img src="../images/portfolio/BigSur/DSC04679.jpg" id="bs">
-            <img src="../images/portfolio/BigSur/DSC04728.jpg" id="bs">
-            <img src="../images/portfolio/BigSur/DSC04872.jpg" id="bs">
-            <img src="../images/portfolio/BigSur/DSC04875.jpg" id="bs">
-            <img src="../images/portfolio/BigSur/DSC04893.jpg" id="bs">
-            <img src="../images/portfolio/BigSur/DSC04925.jpg" id="bs">
-            <img src="../images/portfolio/BigSur/DSC04930.jpg" id="bs">
-            <img src="../images/portfolio/BigSur/DSC04970.jpg" id="bs">
-            <img src="../images/portfolio/BigSur/DSC05021.jpg" id="bs">
+            <img src='../images/portfolio/BigSur/DSC04509.jpg' id="bs">
+            <img src='../images/portfolio/BigSur/DSC04551.jpg' id="bs">
+            <img src='../images/portfolio/BigSur/DSC04560.jpg' id="bs">
+            <img src='../images/portfolio/BigSur/DSC04582.jpg' id="bs">
+            <img src='../images/portfolio/BigSur/DSC04608.jpg' id="bs">
+            <img src='../images/portfolio/BigSur/DSC04646.jpg' id="bs">
+            <img src='../images/portfolio/BigSur/DSC04663.jpg' id="bs">
+            <img src='../images/portfolio/BigSur/DSC04668.jpg' id="bs">
+            <img src='../images/portfolio/BigSur/DSC04679.jpg' id="bs">
+            <img src='../images/portfolio/BigSur/DSC04728.jpg' id="bs">
+            <img src='../images/portfolio/BigSur/DSC04872.jpg' id="bs">
+            <img src='../images/portfolio/BigSur/DSC04875.jpg' id="bs">
+            <img src='../images/portfolio/BigSur/DSC04893.jpg' id="bs">
+            <img src='../images/portfolio/BigSur/DSC04925.jpg' id="bs">
+            <img src='../images/portfolio/BigSur/DSC04930.jpg' id="bs">
+            <img src='../images/portfolio/BigSur/DSC04970.jpg' id="bs">
+            <img src='../images/portfolio/BigSur/DSC05021.jpg' id="bs">
         </div>
         <hr class="gallery-hr">
         <div class="gallery">
             <h1 style="font-size: 33.6px;">CVR Robo Competition</h1>
         </div>
+    </div>
 
-        <script>
-            function preloadImages(array) {
-                if (!preloadImages.list) {
-                    preloadImages.list = [];
-                }
-                var list = preloadImages.list;
-                for (var i = 0; i < array.length; i++) {
-                    var img = new Image();
-                    img.onload = function () {
-                        var index = list.indexOf(this);
-                        if (index !== -1) {
-                            // remove image from the array once it's loaded
-                            // for memory consumption reasons
-                            list.splice(index, 1);
-                        }
-                    }
-                    list.push(img);
-                    img.src = array[i];
-                }
+    <script>
+        function preloadImages(array) {
+            if (!preloadImages.list) {
+                preloadImages.list = [];
             }
+            var list = preloadImages.list;
+            for (var i = 0; i < array.length; i++) {
+                var img = new Image();
+                img.onload = function () {
+                    var index = list.indexOf(this);
+                    if (index !== -1) {
+                        // remove image from the array once it's loaded
+                        // for memory consumption reasons
+                        list.splice(index, 1);
+                    }
+                }
+                list.push(img);
+                img.src = array[i];
+            }
+        }
 
-            preloadImages(["../images/portfolio/BigSur/DSC04509.jpg", "../images/portfolio/BigSur/DSC04551.jpg", "../images/portfolio/BigSur/DSC04560.jpg", "../images/portfolio/BigSur/DSC04582.jpg", "../images/portfolio/BigSur/DSC04608.jpg", "../images/portfolio/BigSur/DSC04646.jpg", "../images/portfolio/BigSur/DSC04663.jpg", "../images/portfolio/BigSur/DSC04668.jpg", "../images/portfolio/BigSur/DSC04679.jpg", "../images/portfolio/BigSur/DSC04728.jpg", "../images/portfolio/BigSur/DSC04872.jpg", "../images/portfolio/BigSur/DSC04875.jpg", "../images/portfolio/BigSur/DSC04893.jpg", "../images/portfolio/BigSur/DSC04925.jpg", "../images/portfolio/BigSur/DSC04930.jpg", "../images/portfolio/BigSur/DSC04970.jpg", "../images/portfolio/BigSur/DSC05021.jpg"]);
-        </script>
+        preloadImages(['../images/portfolio/BigSur/DSC04509.jpg', '../images/portfolio/BigSur/DSC04551.jpg', '../images/portfolio/BigSur/DSC04560.jpg', '../images/portfolio/BigSur/DSC04582.jpg', '../images/portfolio/BigSur/DSC04608.jpg', '../images/portfolio/BigSur/DSC04646.jpg', '../images/portfolio/BigSur/DSC04663.jpg', '../images/portfolio/BigSur/DSC04668.jpg', '../images/portfolio/BigSur/DSC04679.jpg', '../images/portfolio/BigSur/DSC04728.jpg', '../images/portfolio/BigSur/DSC04872.jpg', '../images/portfolio/BigSur/DSC04875.jpg', '../images/portfolio/BigSur/DSC04893.jpg', '../images/portfolio/BigSur/DSC04925.jpg', '../images/portfolio/BigSur/DSC04930.jpg', '../images/portfolio/BigSur/DSC04970.jpg', '../images/portfolio/BigSur/DSC05021.jpg']);
+    </script>
 </body>
 
 </html>
