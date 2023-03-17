@@ -3,6 +3,7 @@
 :root {
     --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
     --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    --accent: #78b6ec;
 }
 
 html, body {
@@ -67,7 +68,7 @@ a:hover {
 }
 
 .photo:hover {
-    color: #78b6ec;
+    color: var(--accent);
 }
 
 .main {
@@ -120,7 +121,7 @@ p {
     font-size: 20px;
     line-height: 1;
     font-weight: 700;
-    color: #78b6ec;
+    color: var(--accent);
 }
 
 .main p span {
@@ -137,7 +138,7 @@ p {
     line-height: 1;
     opacity: 0.5;
     font-weight: 700;
-    color: #78b6ec;
+    color: var(--accent);
     letter-spacing: 2px;
     top: 50%;
     left: 20px;
@@ -160,7 +161,7 @@ p {
     line-height: 1;
     opacity: 0.5;
     font-weight: 700;
-    color: #78b6ec;
+    color: var(--accent);
     letter-spacing: 2px;
     top: 50%;
     right: 20px;
@@ -249,4 +250,27 @@ p {
 .justify-content-center {
     -ms-flex-pack: center !important;
     justify-content: center !important
+}
+
+.contact-button {
+    background-color: white;
+    border: none;
+    border-radius: 6px;
+    color: black;
+    flex-grow: 1;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 16px 16px 16px 16px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    left: 50px;
+    bottom: 30px;
+    font-size: 40px;
+    transition: 0.2s;
+}
+
+.contact-button:hover {
+    background-color: var(--accent);
+    cursor: pointer;
 }
