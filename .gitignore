@@ -67,3 +67,7 @@ node_modules/
 
 # Automated Git Scripts
 *.cmd
+
+# login stuff
+api
+server.js

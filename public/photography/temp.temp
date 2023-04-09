@@ -1,0 +1,103 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link re="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <link rel="icon" type="image/x-icon" href="./3.ico">
+    <title>2023</title>
+</head>
+
+<body>
+    <div>
+    <a href="../photography"><i rel="preload" class="fa-solid fa-circle-chevron-left go-home"></i></a>
+    
+    <div class="gallery-container">
+        <div class="gallery-grid">
+
+            <img src='../images/portfolio/BigSur/DSC04509.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04551.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04560.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04930.jpg'>
+
+
+            <img src='../images/portfolio/BigSur/DSC05021.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04582.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04608.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04646.jpg'>
+
+
+            <img src='../images/portfolio/BigSur/DSC04663.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04668.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04679.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04728.jpg'>
+
+
+            <img src='../images/portfolio/BigSur/DSC04872.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04875.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04893.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04925.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04970.jpg'>
+        </div>
+
+    </div>
+    </div>
+
+    <script>
+        function preloadImages(array) {
+            if (!preloadImages.list) {
+                preloadImages.list = [];
+            }
+            var list = preloadImages.list;
+            for (var i = 0; i < array.length; i++) {
+                var img = new Image();
+                img.onload = function () {
+                    var index = list.indexOf(this);
+                    if (index !== -1) {
+                        // remove image from the array once it's loaded
+                        // for memory consumption reasons
+                        list.splice(index, 1);
+                    }
+                }
+                list.push(img);
+                img.src = array[i];
+            }
+        }
+
+        preloadImages(['../images/portfolio/BigSur/DSC04509.jpg', '../images/portfolio/BigSur/DSC04551.jpg', '../images/portfolio/BigSur/DSC04560.jpg', '../images/portfolio/BigSur/DSC04582.jpg', '../images/portfolio/BigSur/DSC04608.jpg', '../images/portfolio/BigSur/DSC04646.jpg', '../images/portfolio/BigSur/DSC04663.jpg', '../images/portfolio/BigSur/DSC04668.jpg', '../images/portfolio/BigSur/DSC04679.jpg', '../images/portfolio/BigSur/DSC04728.jpg', '../images/portfolio/BigSur/DSC04872.jpg', '../images/portfolio/BigSur/DSC04875.jpg', '../images/portfolio/BigSur/DSC04893.jpg', '../images/portfolio/BigSur/DSC04925.jpg', '../images/portfolio/BigSur/DSC04930.jpg', '../images/portfolio/BigSur/DSC04970.jpg', '../images/portfolio/BigSur/DSC05021.jpg']);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            function setColumnWidth() {
+                const containerWidth = $('.gallery-grid').width();
+                const colWidth = (containerWidth - 30) / 4;
+                $('.grid-item').css('width', colWidth);
+            }
+
+            setColumnWidth();
+            $(window).on('resize', setColumnWidth);
+
+            var $grid = $('.gallery-grid').masonry({
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-item',
+                gutter: 10,
+                percentPosition: true
+            });
+
+            $grid.imagesLoaded().progress(function () {
+                $grid.masonry('layout');
+            });
+        });
+    </script>
+</body>
+
+</html> -->

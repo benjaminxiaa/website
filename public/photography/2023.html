@@ -3,65 +3,62 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="../styles.css">
-    <link rel="icon" type="image/x-icon" href="./3.ico">
     <title>2023</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
 </head>
 
 <body>
-    <div>
-        <a href="../photography"><i rel="preload" class="fa-solid fa-circle-chevron-left go-home"></i></a>
-        <div class="gallery">
-            <h1 style="text-align: right; margin-right: 0.5rem;">Big Sur</h1>
-            <img src='../images/portfolio/BigSur/DSC04509.jpg' id="bs">
-            <img src='../images/portfolio/BigSur/DSC04551.jpg' id="bs">
-            <img src='../images/portfolio/BigSur/DSC04560.jpg' id="bs">
-            <img src='../images/portfolio/BigSur/DSC04582.jpg' id="bs">
-            <img src='../images/portfolio/BigSur/DSC04608.jpg' id="bs">
-            <img src='../images/portfolio/BigSur/DSC04646.jpg' id="bs">
-            <img src='../images/portfolio/BigSur/DSC04663.jpg' id="bs">
-            <img src='../images/portfolio/BigSur/DSC04668.jpg' id="bs">
-            <img src='../images/portfolio/BigSur/DSC04679.jpg' id="bs">
-            <img src='../images/portfolio/BigSur/DSC04728.jpg' id="bs">
-            <img src='../images/portfolio/BigSur/DSC04872.jpg' id="bs">
-            <img src='../images/portfolio/BigSur/DSC04875.jpg' id="bs">
-            <img src='../images/portfolio/BigSur/DSC04893.jpg' id="bs">
-            <img src='../images/portfolio/BigSur/DSC04925.jpg' id="bs">
-            <img src='../images/portfolio/BigSur/DSC04930.jpg' id="bs">
-            <img src='../images/portfolio/BigSur/DSC04970.jpg' id="bs">
-            <img src='../images/portfolio/BigSur/DSC05021.jpg' id="bs">
+    <div class="gallery-container">
+        <a href="../photography"><i class="fa-solid fa-circle-chevron-left go-home"></i></a>
+        <h1>Big Sur</h1>
+        <div class="gallery-grid">
+            <img src='../images/portfolio/BigSur/DSC04509.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04551.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04560.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04930.jpg'>
+
+
+            <img src='../images/portfolio/BigSur/DSC05021.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04582.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04608.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04646.jpg'>
+
+
+            <img src='../images/portfolio/BigSur/DSC04663.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04668.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04679.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04728.jpg'>
+
+
+            <img src='../images/portfolio/BigSur/DSC04872.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04875.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04893.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04925.jpg'>
+            <img src='../images/portfolio/BigSur/DSC04970.jpg'>
         </div>
-        <hr class="gallery-hr">
-        <div class="gallery">
-            <h1 style="font-size: 33.6px;">CVR Robo Competition</h1>
-        </div>
+        <hr>
+        <!-- <h1>Hakone Gardens</h1> -->
     </div>
-
     <script>
-        function preloadImages(array) {
-            if (!preloadImages.list) {
-                preloadImages.list = [];
-            }
-            var list = preloadImages.list;
-            for (var i = 0; i < array.length; i++) {
-                var img = new Image();
-                img.onload = function () {
-                    var index = list.indexOf(this);
-                    if (index !== -1) {
-                        // remove image from the array once it's loaded
-                        // for memory consumption reasons
-                        list.splice(index, 1);
-                    }
-                }
-                list.push(img);
-                img.src = array[i];
-            }
-        }
+        $(document).ready(function () {
+            var $grid = $('.gallery-grid').masonry({
+                itemSelector: 'img',
+                columnWidth: 'img',
+                gutter: 2, /* Half the spacing between images */
+                percentPosition: true,
+                horizontalOrder: false
+            });
 
-        preloadImages(['../images/portfolio/BigSur/DSC04509.jpg', '../images/portfolio/BigSur/DSC04551.jpg', '../images/portfolio/BigSur/DSC04560.jpg', '../images/portfolio/BigSur/DSC04582.jpg', '../images/portfolio/BigSur/DSC04608.jpg', '../images/portfolio/BigSur/DSC04646.jpg', '../images/portfolio/BigSur/DSC04663.jpg', '../images/portfolio/BigSur/DSC04668.jpg', '../images/portfolio/BigSur/DSC04679.jpg', '../images/portfolio/BigSur/DSC04728.jpg', '../images/portfolio/BigSur/DSC04872.jpg', '../images/portfolio/BigSur/DSC04875.jpg', '../images/portfolio/BigSur/DSC04893.jpg', '../images/portfolio/BigSur/DSC04925.jpg', '../images/portfolio/BigSur/DSC04930.jpg', '../images/portfolio/BigSur/DSC04970.jpg', '../images/portfolio/BigSur/DSC05021.jpg']);
+            $grid.imagesLoaded().progress(function () {
+                $grid.masonry('layout');
+            });
+        });
     </script>
 </body>
 

@@ -3,20 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="../styles.css">
-    <link rel="icon" type="image/x-icon" href="./2.ico">
-    <title>2022</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
 </head>
 
 <body>
-    <div>
+    <div class="gallery-container">
         <a href="../photography"><i rel="" class="fa-solid fa-circle-chevron-left go-home"></i></a>
-
-        <div class="gallery">
-            <h1 class="gallery-title">Death Valley</h1>
+        <h1>Death Valley</h1>
+        <div class="gallery-grid">
             <img src="../images/portfolio/DeathValley/b_4132739_deathvalley_mineraldeposits.jpg" id="dv">
             <img src="../images/portfolio/DeathValley/b_4132752_deathvalley_mooon.jpg" id="dv">
             <img src="../images/portfolio/DeathValley/b_4132763_goldenwaves.jpg" id="dv">
@@ -24,9 +25,9 @@
             <img src="../images/portfolio/DeathValley/b_4132809_sequoia_pond.jpg" id="dv">
             <img src="../images/portfolio/DeathValley/b_4132815_sequoia_rock.jpg" id="dv">
         </div>
-        <hr class="gallery-hr">
-        <div class="gallery">
-            <h1 class="gallery-title">Random Pictures</h1>
+        <hr>
+        <h1>Random Pictures</h1>
+        <div class="gallery-grid">
             <img src="../images/portfolio/DeathValley/b_4132686_autumn_maple.jpg" id="dv">
             <img src="../images/portfolio/DeathValley/b_4132709_backyard_moon.jpg" id="dv">
             <img src="../images/portfolio/DeathValley/b_4132717_backyard_moon_greenthing.jpg" id="dv">
@@ -36,31 +37,22 @@
             <img src="../images/portfolio/DeathValley/b_4132793_redsunset.jpg" id="dv">
             <img src="../images/portfolio/DeathValley/DSC04010 - Copy - Copy.JPG" id="dv">
         </div>
+        <!-- <h1>Hakone Gardens</h1> -->
     </div>
-
-
     <script>
-        function preloadImages(array) {
-            if (!preloadImages.list) {
-                preloadImages.list = [];
-            }
-            var list = preloadImages.list;
-            for (var i = 0; i < array.length; i++) {
-                var img = new Image();
-                img.onload = function () {
-                    var index = list.indexOf(this);
-                    if (index !== -1) {
-                        // remove image from the array once it's loaded
-                        // for memory consumption reasons
-                        list.splice(index, 1);
-                    }
-                }
-                list.push(img);
-                img.src = array[i];
-            }
-        }
+        $(document).ready(function () {
+            var $grid = $('.gallery-grid').masonry({
+                itemSelector: 'img',
+                columnWidth: 'img',
+                gutter: 2, /* Half the spacing between images */
+                percentPosition: true,
+                horizontalOrder: false
+            });
 
-        preloadImages(["../images/portfolio/DeathValley/b_4132739_deathvalley_mineraldeposits.jpg", "../images/portfolio/DeathValley/b_4132752_deathvalley_mooon.jpg", "../images/portfolio/DeathValley/b_4132763_goldenwaves.jpg", "../images/portfolio/DeathValley/b_4132804_sequoia_bigtree.jpg", "../images/portfolio/DeathValley/b_4132809_sequoia_pond.jpg", "../images/portfolio/DeathValley/b_4132815_sequoia_rock.jpg", "../images/portfolio/DeathValley/b_4132686_autumn_maple.jpg", "../images/portfolio/DeathValley/b_4132709_backyard_moon.jpg", "../images/portfolio/DeathValley/b_4132717_backyard_moon_greenthing.jpg", "../images/portfolio/DeathValley/b_4132770_hidingmoon.jpg", "../images/portfolio/DeathValley/b_4132779_lavendarbush.jpg", "../images/portfolio/DeathValley/b_4132786_locallygrowndandelions.jpg", "../images/portfolio/DeathValley/b_4132793_redsunset.jpg", "../images/portfolio/DeathValley/DSC04010 - Copy - Copy.JPG"]);
+            $grid.imagesLoaded().progress(function () {
+                $grid.masonry('layout');
+            });
+        });
     </script>
 </body>
 
