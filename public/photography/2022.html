@@ -37,14 +37,13 @@
             <img src="../images/portfolio/DeathValley/b_4132793_redsunset.jpg" id="dv">
             <img src="../images/portfolio/DeathValley/DSC04010 - Copy - Copy.JPG" id="dv">
         </div>
-        <!-- <h1>Hakone Gardens</h1> -->
     </div>
     <script>
         $(document).ready(function () {
             var $grid = $('.gallery-grid').masonry({
                 itemSelector: 'img',
                 columnWidth: 'img',
-                gutter: 2, /* Half the spacing between images */
+                gutter: 2,
                 percentPosition: true,
                 horizontalOrder: false
             });
@@ -54,6 +53,7 @@
             });
         });
     </script>
+    <script src="./imageZoom.js"></script>
 </body>
 
 </html>
