@@ -2,19 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2023</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../styles.css">
+    <script defer src="https://kit.fontawesome.com/6762a13716.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
 </head>
 
 <body>
-    <div class="gallery-container">
+    <div class="overlay" id="loadingOverlay">
+        <div class="logo">bx</div>
+    </div>
+    <div class="gallery-container" id="content">
         <a href="../photography"><i rel="" class="fa-solid fa-circle-chevron-left go-home"></i></a>
         <h1>Death Valley</h1>
         <div class="gallery-grid">
@@ -54,6 +61,7 @@
         });
     </script>
     <script src="./imageZoom.js"></script>
+    <script src="../loadingOverlay.js"></script>
 </body>
 
 </html>

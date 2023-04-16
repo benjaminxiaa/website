@@ -1,36 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" style="height: 100%; overflow: hidden;">
+<html lang="en">
 
 <head>
+    <title>Contact</title>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
     <link rel="stylesheet" type="text/css" href="./styles.css">
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
-    <title>Contact</title>
+    <script defer src="https://kit.fontawesome.com/6762a13716.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <div class="main">
-        <a href="./index"><i class="fa-solid fa-circle-chevron-left go-home"></i></a>
+<body class="contact-main">
+    <a href="./index"><i class="fa-solid fa-circle-chevron-left go-home"></i></a>
 
-        <div class="section-center">
-            <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-12" style="margin-left: 200px;">
-                        <h1>Contact</h1>
-                    </div>
-                    <div class="col-12" style="margin-left: 400px; display: inline-block; vertical-align: middle;">
-                        <h1 style="display: inline;">Me</h1>
-                        <button class="contact-button"><a target="_blank"
-                                href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=xiaa.benjamin@gmail.com">here</a></button>
-                    </div>
-                </div>
-            </div>
+    <div class="contact-container">
+        <h2 class="contact">Contact</h2>
+        <div class="me-container">
+            <h2 class="me">Me</h2>
+            <a href="mailto:xiaa.benjamin@gmail.com" class="btn">Here!</a>
         </div>
     </div>
+
+    <script src="../loadingOverlay.js"></script>
 </body>
 
 </html>
