@@ -1,4 +1,3 @@
 ﻿# Website
-Hi! This repository is for my personal website at: [benjaminxia.com](https://benjaminxia.com)
 
-###### Copyright &copy; 2023 - Benjamin Xia
+# I have updated to a v2. [repo](https://github.com/benjaminxiaa/website-v2)
